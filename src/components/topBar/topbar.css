@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     font-family: "Josefin Sans", sans-serif;
+    z-index: 999;
 }
 
 .topLeft,.topRight{
@@ -18,6 +19,7 @@
 
 .topCenter{
     flex: 6;
+    color: #C0A86D;
 }
 
 .topIcon1{
@@ -58,7 +60,7 @@
 
 .topSearchIcon{
     font-size: 18px;
-    color: #666;
+    color: #E1C06E;
     cursor: pointer;
     margin-left: 15px;
 }
