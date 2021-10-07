@@ -1,0 +1,36 @@
+.header{
+    margin-top: 60px;
+}
+
+.headerTitles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lora', serif;
+    color: #D5BC7F;
+}
+
+.headerTitleSm{
+    position: absolute;
+    top: 10%;
+    font-size: 20px;
+}
+
+.headerTitleLg{
+    position: absolute;
+    top: 13%;
+    font-size: 100px;
+}
+
+.headerImg{
+    width: 100%;
+    height: 450px;
+    margin-top: 85px;
+    object-fit: cover;
+    z-index: 999;
+}
+
+.animate__animated.animate__fadeIn {
+    --animate-duration: 2s;
+  }
+  
