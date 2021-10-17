@@ -1,0 +1,8 @@
+yarn
+npm
+
+npm install react-router-dom
+yarn add express mongoose dotenv multer
+yarn add nodemon
+sudo npm install bcrypt
+yarn add multer
