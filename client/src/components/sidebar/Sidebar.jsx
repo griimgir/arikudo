@@ -1,14 +1,26 @@
-import "./sidebar.css"
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "./sidebar.css";
 // import sidebarPic from './purpleFlowers.jpg'
 
 export default function Sidebar() {
+    const [cats, setCats] = useState([]);
+
+    useEffect(() => {
+        const getCats = async () => {
+            const res = await axios.get("/categories");
+            setCats(res.data);
+        };
+        getCats();
+    }, []);
     return (
         <div className="sidebar">
             <div className="sidebarItem">
-                <span className="sidebarTitle">ABOUT ME</span>
-                <img 
+                <span className="sidebarTitle">ABOUT ARI</span>
+                <img
                     src="https://ariverie.carrd.co/assets/images/image01.png?v=81eb9102"
-                    alt="" 
+                    alt=""
                 />
                 <p>
                     Laboris sunt aute cupidatat velit magna velit ullamco dolore mollit
@@ -16,20 +28,22 @@ export default function Sidebar() {
                 </p>
             </div>
             <div className="sidebarItem">
-                <span className="sidebarTitle">CATEGORIES</span>
+                {/* <span className="sidebarTitle">CATEGORIES</span> */}
                 <ul className="sidebarList">
-                    <li className="sidebarListItem">Entree 1</li>
-                    <li className="sidebarListItem">Entree 2</li>
-                    <li className="sidebarListItem">Entree 3</li>
-                    <li className="sidebarListItem">Entree 4</li>
+                    {cats.map((c) => (
+                        <Link to={`/?cat=${c.name}`} className="link">
+                            <li className="sidebarListItem">{c.name}</li>
+                        </Link>
+                    ))}
                 </ul>
             </div>
             <div className="sidebarItem">
-                <span className="sidebarTitle">THE CREATOR</span>
+                <span className="sidebarTitle">Creator of the site</span>
                 <div className="sidebarSocial">
-                    <i className="sidebarIcon fab fa-github"></i>
+                    <i>Ej (Parsecs)</i>
+                    {/* <i className="sidebarIcon fab fa-github"></i> */}
                 </div>
-            </div>    
+            </div>
         </div>
     );
 }

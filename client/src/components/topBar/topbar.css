@@ -22,10 +22,18 @@
     color: #C0A86D;
 }
 
-.topIcon1{
+/* .topIcon1{
     font-size: 20px;
     margin-right: 10px;
     color: #000;
+    cursor: pointer;
+} */
+
+.topIcon1{
+    font-size: 20px;
+    font: 'Valera Round', sans-serif;
+    margin-right: 10px;
+    color: #9146FF;
     cursor: pointer;
 }
 
@@ -41,6 +49,7 @@
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .topList{

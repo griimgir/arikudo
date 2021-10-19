@@ -6,16 +6,20 @@ import Write from "./pages/write/Write";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 // import Test from "./pages/test/Test";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  // Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   // Link
+// } from "react-router-dom";
 
 function App() {
-  const user = true; //{user ? <Home/> :<Register />}  --> If you are a user got to homepage, if not register
+  // const user = true; //{user ? <Home/> :<Register />}  --> If you are a user got to homepage, if not register
+  const { user } = useContext(Context);
   return (
     <Router>
       <TopBar/>
