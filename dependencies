@@ -12,3 +12,7 @@ yarn add path
 
 --inside client--
 yarn add axios
+
+
+npm install <package-name> --save-dev
+
