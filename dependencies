@@ -1,0 +1,18 @@
+yarn
+npm
+
+npm install react-router-dom
+
+--inside api--
+yarn add express mongoose dotenv multer
+yarn add nodemon
+sudo npm install bcrypt
+yarn add multer
+yarn add path
+
+--inside client--
+yarn add axios
+
+
+npm install <package-name> --save-dev
+
